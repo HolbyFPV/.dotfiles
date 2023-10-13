@@ -194,13 +194,13 @@ window_rules:
   - command: "set floating"
     match_title: "Harpoon"
   
-  - command: 'set tiling'
+  - command: 'set floating'
     match_process_name: 'UnrealEditor-Win64-DebugGame'
     # match_process_name: 'Overdrive [DebugGame] - Unreal Editor'
 
-  - command: 'set floating'
+  - command: 'set tiling'
     match_process_name: 'UnrealEditor-Win64-DebugGame'
-    match_title: '/Open Asset/'
+    match_title: '/^(?!Open Asset).*$/'
     on: ['manage', 'first_focus', 'first_title_change']
 
   # - command: "set roundedwindow"
