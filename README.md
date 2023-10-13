@@ -6,7 +6,7 @@ managed by [`chezmoi`](https://github.com/twpayne/chezmoi)
 
 </div>
 
-![screenshot](https://github.com/HolbyFPV/.dotfiles/screenshots/271855850-1c77fd12-048c-4a33-9228-5ef715efcc97.png)
+![screenshot](https://raw.githubusercontent.com/HolbyFPV/.dotfiles/main/screenshots/271855850-1c77fd12-048c-4a33-9228-5ef715efcc97.png)
 # Install
 
 Install Scoop, Git, and MinGW (using Powershell)
