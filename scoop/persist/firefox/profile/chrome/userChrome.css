@@ -1,0 +1,21 @@
+/*
+Firefox Theme:
+https://addons.mozilla.org/en-US/firefox/addon/holby-github-dark
+*/
+
+#tabbrowser-tabs {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
+
+hbox.titlebar-spacer,
+.titlebar-buttonbox-container,
+.tab-close-button,
+#alltabs-button,
+#firefox-view-button,
+#customizableui-special-spring1,
+#customizableui-special-spring2
+{
+    display: none !important;
+}

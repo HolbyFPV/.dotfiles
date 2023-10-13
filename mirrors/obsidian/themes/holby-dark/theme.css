@@ -1,0 +1,112 @@
+.theme-dark {
+  --background-primary: #1c2128;
+  --background-primary-alt: #1c2128;
+  --background-secondary: #1c2128;
+  --background-secondary-alt: #1c2128;
+  --text-normal: #c6cdd5;
+  --text-faint: #e6edf3;
+  --text-title: #7ce38b;
+  --text-title-h6: #d0f6d5;
+  --text-title-h5: #cff6d5;
+  --text-title-h4: #baf1c2;
+  --text-title-h3: #a5edb0;
+  --text-title-h2: #91e89d;
+  --text-title-h1: #7ce38b;
+  --text-highlight-bg: #2c313a;
+  --text-link: #2c313a;
+  --text-a-hover: #2c313a;
+  --text-accent-hover: #2f81f7;
+  /* ^^^ added for hover over bracket internal links */
+  --inline-code: #2c313a;
+  --code-block: #2c313a;
+  --text-a: #2f81f7;
+  --interactive-accent: #2f81f7;
+  --text-accent: #2f81f7;
+  --text-on-accent: #1c2128;
+  --interactive-accent-rgb: #2f81f7;
+  --vim-cursor: #7ce38b;
+  /*  --text-mark:                  add text-mark if needed, this should work together with 'mark' */
+  --pre-code: #;
+  --interactive-before: #7c6f64;
+  --background-modifier-border: #333841;
+  --text-selection: #2c313a;
+}
+
+.cm-focused .cm-fat-cursor {
+  background-color: var(--vim-cursor) !important;
+}
+
+.is-hidden-frameless {
+  --divider-vertical-height: calc(100% - var(--header-height));
+}
+
+.workspace-tab-header-container {
+  padding: 0px 0px 0px 0px !important;
+}
+
+.titlebar-button-container,
+.workspace-tab-header-inner-close-button {
+  width: 0px !important;
+  display: none !important;
+}
+
+.tree-item-children {
+  border-left: none !important;
+}
+
+.markdown-rendered pre {
+  position: initial;
+  overflow-x: auto;
+}
+
+.cm-active.cm-gutterElement {
+  font-weight: 600 !important;
+  color: var(--text-title) !important;
+}
+
+.vertical-tab-header-group-title {
+  color: var(--text-title) !important;
+}
+
+.inline-title {
+  color: var(--text-title) !important;
+}
+
+.cm-header-1,
+.markdown-preview-view h1 {
+  color: var(--text-title-h1) !important;
+}
+
+.cm-header-2,
+.markdown-preview-view h2 {
+  color: var(--text-title-h2) !important;
+}
+
+.cm-header-3,
+.markdown-preview-view h3 {
+  color: var(--text-title-h3) !important;
+}
+
+.cm-header-4,
+.markdown-preview-view h4 {
+  color: var(--text-title-h4) !important;
+}
+
+.cm-header-5,
+.markdown-preview-view h5 {
+  color: var(--text-title-h5) !important;
+}
+
+.cm-header-6,
+.markdown-preview-view h6 {
+  color: --text-normal;
+  color: var(--text-title-h6) !important;
+}
+
+.cm-gutter {
+  color: #636e7b !important;
+
+  .markdown-rendered code {
+    width: max-content;
+  }
+}

@@ -1,0 +1,36 @@
+vim.g.mapleader = " "
+-- Clear previous leader key mapping
+vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>q', ':q<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>Q', ':qa<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
+vim.keymap.set("v", "<tab>", ">gv")
+vim.keymap.set("n", "<tab>", "v><c-\\><c-n>")
+vim.keymap.set("v", "<s-tab>", "<gv")
+vim.keymap.set("n", "<s-tab>", "v<<c-\\><c-n>")
+vim.keymap.set("i", "<s-tab>", "<c-\\><c-n>v<<c-\\><c-n>^i")
+vim.keymap.set("n", "<leader>1", function() require("harpoon.ui").nav_file(1) end)
+vim.keymap.set("n", "<leader>2", function() require("harpoon.ui").nav_file(2) end)
+vim.keymap.set("n", "<leader>3", function() require("harpoon.ui").nav_file(3) end)
+vim.keymap.set("n", "<leader>4", function() require("harpoon.ui").nav_file(4) end)
+vim.keymap.set("n", "<leader>;", function() require("harpoon.ui").toggle_quick_menu() end)
+vim.keymap.set("n", "<leader>a", function() require("harpoon.mark").add_file() end)
+vim.keymap.set("n", "<leader>v", ":vsplit<CR><C-w>l")
+vim.keymap.set("n", "<leader>b", ":split<CR><C-w>j")
+vim.keymap.set("n", "<leader>h", "<C-w>h")
+vim.keymap.set("n", "<leader>j", "<C-w>j")
+vim.keymap.set("n", "<leader>k", "<C-w>k")
+vim.keymap.set("n", "<leader>l", "<C-w>l")
+vim.keymap.set("n", "H", "<C-o>")
+vim.keymap.set("n", "L", "<C-i>")
+vim.keymap.set("n", "J", "<C-d>zz")
+vim.keymap.set("n", "K", "<C-u>zz")
+vim.keymap.set("n", "<leader>/", ":noh<CR>")
+
+
+-- Need to set explicitely these defaults due to conflict with nvim-surround and leap
+-- https://github.com/kylechui/nvim-surround/issues/253
+vim.keymap.set({ "n" }, "S", "<Plug>(leap-backward-to)")
+vim.keymap.set({ "n" }, "s", "<Plug>(leap-forward-to)")
+vim.keymap.set({ "o", "x" }, "Z", "<Plug>(leap-backward-till)")
+vim.keymap.set({ "o", "x" }, "z", "<Plug>(leap-forward-till)")

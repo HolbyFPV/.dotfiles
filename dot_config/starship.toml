@@ -1,0 +1,105 @@
+format = """
+[](fg:#7ce38b)\
+[ h~ ](bg:#7ce38b fg:#121212)\
+[](fg:#7ce38b bg:#21262d)\
+$time\
+[](fg:#21262d bg:#a2d2fb)\
+$directory\
+[](fg:#a2d2fb bg:#21262d)\
+$git_branch\
+$git_status\
+[ ](fg:#21262d)\
+"""
+
+[username]
+show_always = true
+style_user = "bg:#9A348E"
+style_root = "bg:#9A348E"
+format = '[$user ]($style)'
+
+[directory]
+style = "bg:#a2d2fb fg:#121212"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[time]
+disabled = false 
+time_format = "%R" # Hour:Minute Format
+style = "bg:#21262d fg:#c6cdd6"
+format = '[ $time ]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:#21262d fg:#c6cdd6"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#21262d"
+format = '[$all_status $ahead_behind ]($style)'
+
+[c]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#06969A"
+format = '[ $symbol $context ]($style) $path'
+
+[elixir]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'

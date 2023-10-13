@@ -1,0 +1,147 @@
+" IdeaVim action list - https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
+
+" Options
+set	fileencoding="utf-8"
+set	hlsearch
+set incsearch
+set	ignorecase
+set	smartcase
+set	smartindent
+set	splitbelow
+set	splitright
+set tabstop = 4
+set	noswapfile
+set	undofile
+set	undolevels=10000
+set	undoreload=10000
+set	expandtab
+set	shiftwidth=4
+set	tabstop=4
+set	softtabstop=4
+set	cursorline
+set	relativenumber number
+set	wrap
+set	nolinebreak
+set	scrolloff=8
+set	sidescrolloff=8
+set showmode
+set clipboard+=unnamed
+set ideajoin               
+set ideastatusicon=enabled
+set ideavimsupport=dialog 
+
+" Plugins
+set NERDTree
+set easymotion
+set surround
+set highlightedyank
+let g:highlightedyank_highlight_duration = "1500"
+let g:highlightedyank_highlight_color = "rgba(124, 227, 139, 55)"
+
+" Set Leader Key
+let mapleader = " "
+nnoremap <Space> <Nop>
+map <S-Space> <Leader>
+
+" File Actions
+nnoremap <Leader>q :action CloseEditor<CR>
+nnoremap <Leader>w :action SaveDocument<CR>
+
+" Harpoon
+nmap <Leader>; :action ShowHarpoon<CR>
+nmap <Leader>a :action AddToHarpoon<cr>
+nmap <Leader>1 :action GotoHarpoon1<cr>
+nmap <Leader>2 :action GotoHarpoon2<cr>
+nmap <Leader>3 :action GotoHarpoon3<cr>
+nmap <Leader>4 :action GotoHarpoon4<cr>
+nmap <Leader>5 :action GotoHarpoon5<cr>
+
+" Command Palette
+nmap <Leader>c <Action>(GotoAction)
+
+" Navigate Files 
+nnoremap <Leader>t :NERDTree<CR> 
+nnoremap <Leader>f :action GotoFile<CR>
+vnoremap <Leader>f :action GotoFile<CR>
+nnoremap <Leader>g :action FindInPath<CR>
+vnoremap <Leader>g :action FindInPath<CR>
+nmap <Leader>o <Action>(RecentFiles)
+nmap <Leader>O <Action>(RecentChangedFiles)
+
+" Vertical navigation
+nnoremap K <C-u>zz
+nnoremap J <C-d>zz
+nmap s <Plug>(easymotion-bd-f)
+nmap <Leader>s <Action>(FileStructurePopup)
+nmap <Leader>S <Action>(ActivateStructureToolWindow)
+
+" Clear search highlight
+map <Leader>/ :noh<CR>
+
+" Navigate Jump List
+nmap L <Action>(Forward)
+nmap H <Action>(Back)
+
+" Navigate Open Panes
+nnoremap <Leader>h <C-w>h
+nnoremap <Leader>j <C-w>j
+nnoremap <Leader>k <C-w>k
+nnoremap <Leader>l <C-w>l
+
+" Split Panes
+noremap <Leader>V :action SplitHorizontally<CR>
+noremap <Leader>v :action SplitVertically<CR>
+nnoremap <Leader>u :action Unsplit<CR>
+
+" Switch between IDE windows
+nmap <Leader>n <Action>(HideAllWindows) 
+map <leader>b <Action>(JumpToLastWindow)
+
+" Indent Text
+vnoremap <Tab> :action EditorIndentLineOrSelection<CR>
+vnoremap <S-tab> :action EditorUnindentSelection<CR>
+nnoremap <Tab> :action EditorIndentLineOrSelection<CR>
+nnoremap <S-tab> :action EditorUnindentSelection<CR>
+
+" Move Lines
+vnoremap <C-j> :action MoveLineDown<CR>
+vnoremap <C-k> :action MoveLineUp<CR>
+nnoremap <C-j> :action MoveLineDown<CR>
+nnoremap <C-k> :action MoveLineUp<CR>
+
+" Refactor
+map <leader>r <Action>(RenameElement)
+noremap <Leader>p :action ReformatCode<CR>
+
+" Get / Goto 
+nmap gd <Action>(GotoDeclaration)
+nmap gD <Action>(QuickImplementations)
+nmap gn <Action>(GotoNextError)
+nmap gN <Action>(GotoPreviousError)
+nmap ge <Action>(ActivateTODOToolWindow)
+nmap gu <Action>(FindUsages)
+nmap gp <Action>(ParameterInfo)
+nmap gh <Action>(QuickJavaDoc)
+" alt + enter -> ShowIntentionActions
+" ctrl + space -> CodeCompletion
+
+" Join lines fix
+nmap gJ <Action>(EditorJoinLines)
+
+" Toggle relative or absolute line numbers
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber number
+  endif
+endfunction
+nnoremap <Leader><Tab> :call NumberToggle()<CR>
+
+nmap <Leader>ir <Action>(IdeaVim.ReloadVimRc.reload)
+
+" ======================================================= "
+
+"small goto def preview window -> QuickImplementations
+"nmap gi <Action>(GotoImplementation)
+"nmap ga <Action>(GotoAction)

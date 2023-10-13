@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Holby Cube</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+
+      body {
+        background: #1c2128;
+        color: #fff;
+        font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+      }
+
+      .background {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      }
+
+      #draw {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      label,
+      input {
+        vertical-align: middle;
+      }
+
+      label {
+        position: relative;
+        display: inline-block;
+        margin: 5px;
+        padding: 5px 10px;
+        user-select: none;
+        z-index: 2;
+        cursor: pointer;
+      }
+
+      #debug {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #fff;
+        font-family: Consolas, monaco, monospace;
+        font-size: 1.5rem;
+        white-space: pre;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <!-- <label><input checked id='autoRotate' type='checkbox'> Auto rotation</label> -->
+    <div id="debug"></div>
+
+    <canvas id="draw"></canvas>
+
+    <script src="index.js"></script>
+  </body>
+</html>

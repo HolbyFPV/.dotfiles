@@ -1,0 +1,12 @@
+{
+  "accentColor": "#6bef8c",
+  "cssTheme": "holby-dark",
+  "theme": "obsidian",
+  "showViewHeader": true,
+  "interfaceFontFamily": "JetBrainsMono Nerd Font Mono",
+  "textFontFamily": "JetBrainsMono Nerd Font Mono",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font Mono",
+  "baseFontSize": 15,
+  "nativeMenus": false,
+  "translucency": false
+}
